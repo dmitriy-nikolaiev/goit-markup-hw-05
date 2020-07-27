@@ -118,8 +118,10 @@ body {
 }
 
 .navigation-item-link {
+  position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -136,12 +138,17 @@ body {
 }
 
 .nav-item-active::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
   content: "";
   display: block;
   height: 4px;
+  width: 100%;
+
   background-color: var(--accent-color);
   border-radius: 2px;
-  /* margin-top: 28px; */
 }
 
 .header-address-list {
@@ -154,12 +161,14 @@ body {
 }
 
 .header-address-item-link {
+  display: flex;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
   color: var(--main-text-color);
-  display: flex;
 }
 
 .header-address-icon {
