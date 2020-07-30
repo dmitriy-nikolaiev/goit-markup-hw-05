@@ -130,6 +130,8 @@ body {
   letter-spacing: 0.02em;
 
   color: var(--main-title-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigation-item-link:hover,
@@ -171,6 +173,8 @@ body {
   letter-spacing: 0.02em;
 
   color: var(--main-text-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-address-icon {
@@ -392,6 +396,9 @@ body {
   padding: 12px;
   border-radius: 50%;
   color: var(--icon-color);
+  /* fill: var(--icon-color); */
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-item-link:hover,
@@ -404,6 +411,7 @@ body {
   height: 20px;
   fill: currentColor;
   /* fill: var(--icon-color); */
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-item-link:hover .social-link-icon,
@@ -427,15 +435,18 @@ body {
   width: 170px;
   height: 90px;
 
-  border: 1px solid var(--icon-color);
+  border: 1px solid;
   border-radius: 4px;
+  border-color: var(--icon-color);
 
   color: var(--icon-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-item-link:hover,
 .clients-item-link:focus {
-  border: 1px solid var(--accent-color);
+  border-color: var(--accent-color);
   color: var(--accent-color);
 }
 
