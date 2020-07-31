@@ -91,9 +91,14 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
 }
+
 .logo-accent {
   color: var(--accent-color);
+
+  /* для анимации */
+  /* display: inline-block; */
 }
+
 .logo-light-theme {
   color: var(--logo-light-theme-color);
 }
@@ -641,8 +646,8 @@ body {
 
 .projects-thumb {
   position: relative;
-  max-width: 370px;
-
+  width: 370px;
+  height: 294px;
   overflow: hidden;
 }
 
@@ -657,7 +662,6 @@ body {
   padding: 24px;
 
   display: flex;
-  justify-content: center;
   align-items: center;
 
   font-style: normal;
@@ -675,4 +679,53 @@ body {
 .projects-item-link:hover .projects-overlay-text,
 .projects-item-link:focus .projects-overlay-text {
   transform: translateY(0);
+}
+
+/* Анимации */
+/* animate__flipInX */
+.about-us-list-item:hover .about-us-overlay {
+  animation: flipInX 1000ms;
+}
+
+/* Для анимации */
+.header .logo {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.header .logo-accent {
+  display: inline-block;
+}
+
+.header .logo:hover {
+  animation: swing 1000ms;
+}
+
+.header .logo:hover .logo-accent {
+  animation: animationWeb 1000ms 1000ms;
+}
+
+@keyframes animationWeb {
+  0% {
+    transform: none;
+  }
+  15% {
+    transform: translateX(10px);
+  }
+  40% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  80% {
+    transform: none;
+  }
+
+  /* 85% {
+    transform: none;
+  } */
+  95% {
+    transform: scaleY(0.1);
+  }
 }
